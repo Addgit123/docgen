@@ -1,0 +1,20 @@
+<nz-upload
+      nzType="drag"
+      [nzMultiple]="true"
+      [nzBeforeUpload]="beforeUpload"
+      
+    >
+      <p class="ant-upload-drag-icon">
+        <span nz-icon nzType="inbox"></span>
+      </p>
+      <p class="ant-upload-text">Click or drag file to this area to upload</p>
+      <p class="ant-upload-hint">
+        Support for a single or bulk upload. Strictly prohibit from uploading company data or other band files
+      </p>
+    </nz-upload>
+
+
+    <button (click)="form_page()"> create form</button>
+    <br><br><br>
+
+    <button type="button" (click)="map_page()">go to mapping page</button>

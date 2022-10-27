@@ -1,0 +1,18 @@
+<form [formGroup]="q_form" >
+  
+    <div formArrayName="question_list">
+      <div  *ngFor="let item of form_questions.controls; let i=index">
+        <div nz-row [formGroupName]="i">
+          <div nz-col nzSpan="12">{{item.value.variable}}</div>
+          <div nz-col nzSpan="12">
+            <nz-select style="width:200px" formControlName="q_id">
+            <nz-option *ngFor="let q of question" [nzValue]="q.q_id" [nzLabel]="q.question"></nz-option>
+            </nz-select>
+          </div>    
+        </div>
+      </div>
+    <button  (click)="submit()"> submit</button>
+    </div>
+    <br><br>
+    <button type="button" (click)="docgen_page()">go to document generation  page</button>
+

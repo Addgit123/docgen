@@ -1,0 +1,30 @@
+
+<br><br><br><br><br><br>
+    <form [formGroup]="CreateForm">
+        
+        <label> enter form name</label>
+        <input type="text" name="form_name" formControlName="form_name" required>
+        <br><br>
+        <div formArrayName = 'form_q'>
+        <button type="button" (click)="addQuestion()"> add form question</button>
+
+        <div *ngFor= "let question of questioncontrol.controls; let i = index">
+            <input type = 'text' [formControlName]="i"/>
+        </div>
+    </div>
+
+    <br><br><br>
+    <div nz-row  >
+        <div nz-col nzSpan="8"><button type="button" (click)="submit()">submit data</button></div>
+    
+
+        <div nz-col nzSpan="8"><button type="button" (click)="map_page()">go to mapping page</button></div>
+ 
+
+        <div nz-col nzSpan="8"><button type="button" (click)="upload_page()">go to upload page</button></div>
+    </div>
+
+
+    </form>
+
+

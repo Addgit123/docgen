@@ -1,0 +1,18 @@
+<form [formGroup]="doc_form" >
+  
+    <div formArrayName="value_list">
+      <div  *ngFor="let item of form_values.controls; let i=index">
+        <div nz-row [formGroupName]="i">
+          <div nz-col nzSpan="12"> {{item.value.question}}</div>
+          <div nz-col nzSpan="12"><input type="text"  formControlName="values" /></div>
+        </div>
+      </div>
+      <button  (click)="submit()"> submit data to form</button>
+    </div>
+
+
+
+    
+
+
+
